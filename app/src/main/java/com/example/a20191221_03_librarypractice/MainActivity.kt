@@ -24,6 +24,13 @@ class MainActivity : BaseActivity() {
     }
 
     override fun setupEvents() {
+
+        iuImgView.setOnClickListener {
+            val intent = Intent(mContext,LargeProfileImageActivity::class.java)
+            intent.putExtra("imgUrl","https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRi07RFq6QrjZQFA7CG6HAkaDYpTVeUV0QvJ8szgAPDi6osYa1w")
+            startActivity(intent)
+        }
+
         callBtn.setOnClickListener {
 //        전화 권한 (3) 요청 => 획득 완료 되면(1) => 인텐트를 이용해서 전화걸기(2)
 
